@@ -174,32 +174,84 @@ University of Minnesota \\ % Your institution for the title page
 
 %----------------------------------------------------------------------------------------
 \begin{frame}
-\frametitle{3 Projects} % Table of contents slide, comment this block out to remove it
+  \frametitle{Allen's Graph}
+\begin{center}
+\begin{figure}[htb]
+  \scalebox{.8}{%
+\begin{tikzpicture}[-latex ,auto ,node distance =3.2 cm and 3.2cm ,on grid ,
+semithick ,
+state/.style ={rectangle ,top color =white, bottom color = processblue!20,
+draw,processblue, text=blue ,minimum width =1 cm},
+comment/.style ={rounded rectangle, top color =white, bottom color =lightgray,
+draw}]
+  \node[state] at (0,0) (UMN){UMN};
+  \node[state] at (3,0) (Syngenta) {Syngenta};
+  \node[state] at (6,0) (Target)  {Target};
+  \node[state] at (9,0) (Amazon)  {Amazon};
+  % \node[state] at (12,0) (Seed Count)  {SC};
+  \node[comment] at (0,1)  (UMNC) {\footnotesize{MS Stats}};
+  \node[comment] at (3,1)  (SyngentaC) {\footnotesize{Agritech}};
+  \node[comment] at (6,1)  (TargetC) {\footnotesize{Supply Chain}};
+  \node[comment] at (9,1)  (AmazonC) {\footnotesize{Cloud Infra}};
+  % \node[comment] at (12,1)  (SeedC) {\footnotesize{Seed Count}};
+  % Stage Images
+  \node at (0,-3) (UMNI)
+  {\includegraphics[width=0.2\textwidth]{UMN.png}};
+  \node at (3,-3) (SyngentaI)
+  {\includegraphics[width=0.2\textwidth]{syngenta.png}};
+  \node at (6,-3) (TargetI)
+  {\includegraphics[width=0.2\textwidth]{target.png}};
+  \node at (9,-3) (AmazonI)
+  {\includegraphics[width=0.2\textwidth]{alexa.png}};
+  % \node at (12,-3) (SeedsI)
+  % {\includegraphics[width=0.2\textwidth]{partridge_pea_seedsC.pdf}};
+\draw (UMN) -> (Syngenta)  node [midway, above, sloped]
+  {\scriptsize{}};
+\draw (Syngenta) -> (Target) node [midway, above, sloped]
+  {\scriptsize{}};
+\draw (Target) -> (Amazon) node [midway, above, sloped]
+  {\scriptsize{}};
+% \draw (Pod Count) -> (Seed Count) node [midway, above, sloped]
+%  {\scriptsize{}};
+  \draw (UMNI) -> (SyngentaI) -> (TargetI) -> (AmazonI) ;
+\end{tikzpicture}
+}
+% \caption{Components of fitness}
+\label{fig:allens_graph}
+\end{figure}
+\end{center}
+\end{frame}
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Crop Talk} % Table of contents slide, comment this block out to remove it
 \begin{columns}[t] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
 
-\column{.3\textwidth} % Left column and width
+\column{.8\textwidth} % Left column and width
   \textbf{Evolution}\\
   Estimate Darwinian fitness
 \begin{figure}
 \includegraphics[width=0.8\linewidth]{finches.jpg}
 \end{figure}
 
-\column{.3\textwidth} % Right column and width
-  \textbf{Gene Expression}\\
-  Find needles in a haystack
-\begin{figure}
-\includegraphics[width=0.8\linewidth]{DNA.jpg}
-\end{figure}
-
-\column{.3\textwidth} % Right column and width
-  \textbf{Movie Lens}\\
-  Provide movie recommendations
-\begin{figure}
-\includegraphics[width=0.8\linewidth]{netflix.png}
-\end{figure}
+% \column{.3\textwidth} % Right column and width
+%   \textbf{Gene Expression}\\
+%   Find needles in a haystack
+% \begin{figure}
+% \includegraphics[width=0.8\linewidth]{DNA.jpg}
+% \end{figure}
+% 
+% \column{.3\textwidth} % Right column and width
+%   \textbf{Movie Lens}\\
+%   Provide movie recommendations
+% \begin{figure}
+% \includegraphics[width=0.8\linewidth]{netflix.png}
+% \end{figure}
 \end{columns}
 \end{frame}
 %----------------------------------------------------------------------------------------
+
 
 %----------------------------------------------------------------------------------------
 %	PRESENTATION SLIDES
@@ -601,435 +653,435 @@ Siblings share half, half-siblings share a quarter, etc
 
 %----------------------------------------------------------------------------------------
 \begin{frame}
-  \frametitle{Questions?}
-\begin{columns}[t] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-
-\column{.3\textwidth} % Left column and width
-  \textbf{Finished:}\\
-  Aster Models
-\begin{figure}
-\includegraphics[width=0.8\linewidth]{finches.jpg}
-\end{figure}
-
-\column{.3\textwidth} % Right column and width
-  \textbf{}\\
-\begin{figure}
-\end{figure}
-
-\column{.3\textwidth} % Right column and width
-  \textbf{Next:}\\
-  Gene Expression
-\begin{figure}
-\includegraphics[width=0.8\linewidth]{DNA.jpg}
-\end{figure}
-\end{columns}
-\end{frame}
+   \frametitle{Questions?}
+ \begin{columns}[t] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+ 
+ \column{.3\textwidth} % Left column and width
+   \textbf{Finished:}\\
+   Aster Models
+ \begin{figure}
+ \includegraphics[width=0.8\linewidth]{finches.jpg}
+ \end{figure}
+ 
+ % \column{.3\textwidth} % Right column and width
+ %   \textbf{}\\
+ % \begin{figure}
+ % \end{figure}
+ % 
+ % \column{.3\textwidth} % Right column and width
+ %   \textbf{Next:}\\
+ %   Gene Expression
+ % \begin{figure}
+ % \includegraphics[width=0.8\linewidth]{DNA.jpg}
+ % \end{figure}
+ \end{columns}
+ \end{frame}
 %----------------------------------------------------------------------------------------
 
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Gene Expression}
+% \section{Gene Expression}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %----------------------------------------------------------------------------------------
-\begin{frame}
-  \frametitle{Need for Precision Medicine}
-\begin{center} 
-\begin{aquote}{National Institute of Health (NIH)}
-An emerging approach for disease treatment and prevention that takes into account individual variability in genes, environment and lifestyle for each person.
-\end{aquote}
-\end{center}
-\end{frame}
+% \begin{frame}
+%   \frametitle{Need for Precision Medicine}
+% \begin{center} 
+% \begin{aquote}{National Institute of Health (NIH)}
+% An emerging approach for disease treatment and prevention that takes into account individual variability in genes, environment and lifestyle for each person.
+% \end{aquote}
+% \end{center}
+% \end{frame}
 %----------------------------------------------------------------------------------------
 
 
 %----------------------------------------------------------------------------------------
-\begin{frame}
-\frametitle{Genome-Wide Association Study (GWAS)}
-Examining a genome-wide set of genetic variants (\textcolor{red}{SNPs}) in different individuals to see if any SNP is associated with a trait (\textcolor{red}{complex disease})
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.88\textwidth]{GWAS.png}
-\end{figure}
-\end{frame}
+% \begin{frame}
+% \frametitle{Genome-Wide Association Study (GWAS)}
+% Examining a genome-wide set of genetic variants (\textcolor{red}{SNPs}) in different individuals to see if any SNP is associated with a trait (\textcolor{red}{complex disease})
+% \begin{figure}[htbp]
+%   \centering
+%   \includegraphics[width=0.88\textwidth]{GWAS.png}
+% \end{figure}
+% \end{frame}
 %----------------------------------------------------------------------------------------
 
 %----------------------------------------------------------------------------------------
-\begin{frame}
-\frametitle{Single-Nucleotide Polymorphism (SNPs)}
-\begin{itemize}
-  \item Variation in a single-nucleotide that occurs at a specific position in the genome (e.g.$>1\%$ of the population)
-  \begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.85\textwidth]{SNP.png}
-  \end{figure}
-\end{itemize}
-\end{frame}
+% \begin{frame}
+% \frametitle{Single-Nucleotide Polymorphism (SNPs)}
+% \begin{itemize}
+%   \item Variation in a single-nucleotide that occurs at a specific position in the genome (e.g.$>1\%$ of the population)
+%   \begin{figure}[htbp]
+%     \centering
+%     \includegraphics[width=0.85\textwidth]{SNP.png}
+%   \end{figure}
+% \end{itemize}
+% \end{frame}
 %----------------------------------------------------------------------------------------
 
 %----------------------------------------------------------------------------------------
-\begin{frame}
-\frametitle{Challenges in GWAS}
-\begin{itemize}
-  \item Limited statistical power to identify disease-associated loci ($p >> n$)
-  \bigskip
-  \item Small effect size of each SNP (needle in a haystack)
-  \bigskip
-  \item Difficulty to interpret the biological relevance of susceptible loci and link with disease etiology.
-\end{itemize}
-\end{frame}
-%----------------------------------------------------------------------------------------
-
-
-%----------------------------------------------------------------------------------------
-\begin{frame}
-\frametitle{Normal Prostate Tissue Data}
-  \textbf{Goal: predict phenotype from SNPs}
-\begin{itemize}
-  \item $n = 471$ subjects 
-  \item 88 data sets corresponding to 88 genes
-  \item Response: phenotype in normal prostate tissue after
-    regressing out non-SNP covariates
-  \item Predictors: each gene has 7000 to 32000 SNPs
-\end{itemize}
- \begin{table}[ht]
-\centering
- \rowcolors{1}{light-gray}{light-blue}
-    \begin{tabular}{|ccccccc|}
-      \hline
-        \tiny{index} & \tiny{phenotype} & \tiny{rs111417370\_T} & \tiny{rs2003816\_T} &
-         \tiny{rs116897926\_A} &
-         $\cdots$ & \tiny{rs114857962\_A} \\
-           \hline
-         1 &  0.004 & 0.0 & 1 & 0.0 & $\cdots$ & 0.002 \\
-         2 &  0.328 & 0.0 & 1 & 0.0 & $\cdots$ & 0.004 \\
-         3 &  0.164 & 0.4 & 0 & 0.0 & $\cdots$ & 0.000 \\
-         4 & -0.107 & 0.0 & 1 & 0.0 & $\cdots$ & 0.989 \\
-         5 & -0.109 & 0.0 & 0 & 0.9 & $\cdots$ & 1.000 \\
-      $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ \\
-         \hline
-    \end{tabular}
-    % \label{ARFGAP}
-  \end{table}
-\end{frame}
+% \begin{frame}
+% \frametitle{Challenges in GWAS}
+% \begin{itemize}
+%   \item Limited statistical power to identify disease-associated loci ($p >> n$)
+%   \bigskip
+%   \item Small effect size of each SNP (needle in a haystack)
+%   \bigskip
+%   \item Difficulty to interpret the biological relevance of susceptible loci and link with disease etiology.
+% \end{itemize}
+% \end{frame}
 %----------------------------------------------------------------------------------------
 
 
 %----------------------------------------------------------------------------------------
-\begin{frame}
-\frametitle{Statistical Methods}
-  \textbf{Method Criteria:}
-\begin{itemize}
-  \item Predictive ability
-  \item Simpler is better
-  \item Penalization useful because $p >> n$
-\end{itemize}
-\textbf{Methods used:} 
-\begin{itemize}
-  \item Lasso
-  \item Elastic Net
-  \item Truncated Lasso Penalty (TLP)
-  \item Smoothly Clipped Absolute Deviation (SCAD)
-  \item Random Forest
-\end{itemize}
-\end{frame}
+% \begin{frame}
+% \frametitle{Normal Prostate Tissue Data}
+%   \textbf{Goal: predict phenotype from SNPs}
+% \begin{itemize}
+%   \item $n = 471$ subjects 
+%   \item 88 data sets corresponding to 88 genes
+%   \item Response: phenotype in normal prostate tissue after
+%     regressing out non-SNP covariates
+%   \item Predictors: each gene has 7000 to 32000 SNPs
+% \end{itemize}
+%  \begin{table}[ht]
+% \centering
+%  \rowcolors{1}{light-gray}{light-blue}
+%     \begin{tabular}{|ccccccc|}
+%       \hline
+%         \tiny{index} & \tiny{phenotype} & \tiny{rs111417370\_T} & \tiny{rs2003816\_T} &
+%          \tiny{rs116897926\_A} &
+%          $\cdots$ & \tiny{rs114857962\_A} \\
+%            \hline
+%          1 &  0.004 & 0.0 & 1 & 0.0 & $\cdots$ & 0.002 \\
+%          2 &  0.328 & 0.0 & 1 & 0.0 & $\cdots$ & 0.004 \\
+%          3 &  0.164 & 0.4 & 0 & 0.0 & $\cdots$ & 0.000 \\
+%          4 & -0.107 & 0.0 & 1 & 0.0 & $\cdots$ & 0.989 \\
+%          5 & -0.109 & 0.0 & 0 & 0.9 & $\cdots$ & 1.000 \\
+%       $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ \\
+%          \hline
+%     \end{tabular}
+%     % \label{ARFGAP}
+%   \end{table}
+% \end{frame}
 %----------------------------------------------------------------------------------------
 
 
 %----------------------------------------------------------------------------------------
-\begin{frame}
-\frametitle{Model Evaluation}
-\begin{itemize}
-  \item Divided data into $80\%$ training and $20\%$ test data sets.
-   % \item Parameters tuned by cross validation using the training data .
-  \item 5-Fold Cross Validation (CV) to evaluate the performance of the models.
-  \item Performance measures: 
-  \begin{itemize}
-    \item Mean Squared Error (MSE)
-    \item Relative Error (MSE/variance(y))
-  \end{itemize} 
-\begin{table}
-\centering
-\begin{tabular}{|c | c|}
-\hline
-Methods & Parameters tuned\\
-\hline
-LASSO  & $\lambda$\\
-SCAD & $\lambda$\\
-TLP & $\lambda$\\
-Elastic Net & $\alpha$, $\lambda$\\
-Random Forest & $mtry, ntree$\\
-\hline
-\end{tabular}
-\end{table}
-\medskip
-\item Repeat the procedure for each method for 88 data sets
-\end{itemize}
-\end{frame}
-%----------------------------------------------------------------------------------------
-
-%----------------------------------------------------------------------------------------
-\begin{frame}[fragile]
-  \frametitle{Parallel Processing}
-  Saving computation time on multi-core linux platforms
-  \begin{itemize}
-    \item Parallel processing speeds up the code.
-    \medskip
-    \item Code run in parallel with one core for each CV fold
-    \medskip
-  \item Reduced running time by 71\% (450 sec $\rightarrow$ 130 sec)
-    \medskip
-  \end{itemize}
-  \begin{center}
-    %or \small or \footnotesize etc.
-    \lstinputlisting[language=R, basicstyle=\tiny]{code/foo.R}
-  \end{center}
-\end{frame}
-%----------------------------------------------------------------------------------------
-
-%----------------------------------------------------------------------------------------
-\begin{frame}
-\frametitle{Results by Gene}
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=1.0\textwidth, height = 0.87\textheight]{RelErrorvsGenebyMethod}
-\end{figure}
-\end{frame}
-%----------------------------------------------------------------------------------------
-
-%----------------------------------------------------------------------------------------
-\begin{frame}
-\frametitle{Overall Method Comparison}
-\begin{itemize}
-  \item Elastic Net most predictive. Other methods similar.
-\end{itemize}
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.95\textwidth, height = 0.76\textheight]{Tukeycompare}
-\end{figure}
-\end{frame}
+% \begin{frame}
+% \frametitle{Statistical Methods}
+%   \textbf{Method Criteria:}
+% \begin{itemize}
+%   \item Predictive ability
+%   \item Simpler is better
+%   \item Penalization useful because $p >> n$
+% \end{itemize}
+% \textbf{Methods used:} 
+% \begin{itemize}
+%   \item Lasso
+%   \item Elastic Net
+%   \item Truncated Lasso Penalty (TLP)
+%   \item Smoothly Clipped Absolute Deviation (SCAD)
+%   \item Random Forest
+% \end{itemize}
+% \end{frame}
 %----------------------------------------------------------------------------------------
 
 
-\begin{frame}
-\frametitle{Variable Selection}
-\begin{columns}[T]
- \begin{column}{0.5\textwidth}
- \textbf{Gene: HLA-DQB2.chr6}
- \begin{itemize}
- \item 24743 SNPs
- \item Shrunk to $\sim 100 - 300$
- \end{itemize}
-   \includegraphics[scale = 0.33]{venndiagram.png}
-   \end{column}
-    \begin{column}{0.5\textwidth}
-    \vspace*{-0.2cm}
-    \includegraphics[scale = 0.2]{HLADQB2.pdf}
-    \vspace*{0.3cm}
-    \begin{itemize}
-      \item TLP - simple and interpretable
-      \item SCAD - strange
-      \item To do - check for correlations
-    \end{itemize}
-    \end{column}
-  \end{columns}
-\end{frame}
+%----------------------------------------------------------------------------------------
+% \begin{frame}
+% \frametitle{Model Evaluation}
+% \begin{itemize}
+%   \item Divided data into $80\%$ training and $20\%$ test data sets.
+%    % \item Parameters tuned by cross validation using the training data .
+%   \item 5-Fold Cross Validation (CV) to evaluate the performance of the models.
+%   \item Performance measures: 
+%   \begin{itemize}
+%     \item Mean Squared Error (MSE)
+%     \item Relative Error (MSE/variance(y))
+%   \end{itemize} 
+% \begin{table}
+% \centering
+% \begin{tabular}{|c | c|}
+% \hline
+% Methods & Parameters tuned\\
+% \hline
+% LASSO  & $\lambda$\\
+% SCAD & $\lambda$\\
+% TLP & $\lambda$\\
+% Elastic Net & $\alpha$, $\lambda$\\
+% Random Forest & $mtry, ntree$\\
+% \hline
+% \end{tabular}
+% \end{table}
+% \medskip
+% \item Repeat the procedure for each method for 88 data sets
+% \end{itemize}
+% \end{frame}
+%----------------------------------------------------------------------------------------
 
 %----------------------------------------------------------------------------------------
-\begin{frame}
-  \frametitle{Questions?}
-\begin{columns}[t] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+% \begin{frame}[fragile]
+%   \frametitle{Parallel Processing}
+%   Saving computation time on multi-core linux platforms
+%   \begin{itemize}
+%     \item Parallel processing speeds up the code.
+%     \medskip
+%     \item Code run in parallel with one core for each CV fold
+%     \medskip
+%   \item Reduced running time by 71\% (450 sec $\rightarrow$ 130 sec)
+%     \medskip
+%   \end{itemize}
+%   \begin{center}
+%     %or \small or \footnotesize etc.
+%     \lstinputlisting[language=R, basicstyle=\tiny]{code/foo.R}
+%   \end{center}
+% \end{frame}
+%----------------------------------------------------------------------------------------
 
-\column{.3\textwidth} % Left column and width
-  \textbf{Finished:}\\
-   Gene Expression
-\begin{figure}
-\includegraphics[width=0.8\linewidth]{DNA.jpg}
-\end{figure}
+%----------------------------------------------------------------------------------------
+% \begin{frame}
+% \frametitle{Results by Gene}
+% \begin{figure}[htbp]
+%   \centering
+%   \includegraphics[width=1.0\textwidth, height = 0.87\textheight]{RelErrorvsGenebyMethod}
+% \end{figure}
+% \end{frame}
+%----------------------------------------------------------------------------------------
 
-\column{.3\textwidth} % Right column and width
-  \textbf{}\\
-\begin{figure}
-\end{figure}
+%----------------------------------------------------------------------------------------
+% \begin{frame}
+% \frametitle{Overall Method Comparison}
+% \begin{itemize}
+%   \item Elastic Net most predictive. Other methods similar.
+% \end{itemize}
+% \begin{figure}[htbp]
+%   \centering
+%   \includegraphics[width=0.95\textwidth, height = 0.76\textheight]{Tukeycompare}
+% \end{figure}
+% \end{frame}
+%----------------------------------------------------------------------------------------
 
-\column{.3\textwidth} % Right column and width
-  \textbf{Next:}\\
-  Movie Predictions
-\begin{figure}
-\includegraphics[width=0.8\linewidth]{netflix.png}
-\end{figure}
-\end{columns}
-\end{frame}
+
+% \begin{frame}
+% \frametitle{Variable Selection}
+% \begin{columns}[T]
+%  \begin{column}{0.5\textwidth}
+%  \textbf{Gene: HLA-DQB2.chr6}
+%  \begin{itemize}
+%  \item 24743 SNPs
+%  \item Shrunk to $\sim 100 - 300$
+%  \end{itemize}
+%    \includegraphics[scale = 0.33]{venndiagram.png}
+%    \end{column}
+%     \begin{column}{0.5\textwidth}
+%     \vspace*{-0.2cm}
+%     \includegraphics[scale = 0.2]{HLADQB2.pdf}
+%     \vspace*{0.3cm}
+%     \begin{itemize}
+%       \item TLP - simple and interpretable
+%       \item SCAD - strange
+%       \item To do - check for correlations
+%     \end{itemize}
+%     \end{column}
+%   \end{columns}
+% \end{frame}
+
+%----------------------------------------------------------------------------------------
+% \begin{frame}
+%   \frametitle{Questions?}
+% \begin{columns}[t] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+% 
+% \column{.3\textwidth} % Left column and width
+%   \textbf{Finished:}\\
+%    Gene Expression
+% \begin{figure}
+% \includegraphics[width=0.8\linewidth]{DNA.jpg}
+% \end{figure}
+% 
+% \column{.3\textwidth} % Right column and width
+%   \textbf{}\\
+% \begin{figure}
+% \end{figure}
+% 
+% \column{.3\textwidth} % Right column and width
+%   \textbf{Next:}\\
+%   Movie Predictions
+% \begin{figure}
+% \includegraphics[width=0.8\linewidth]{netflix.png}
+% \end{figure}
+% \end{columns}
+% \end{frame}
 %----------------------------------------------------------------------------------------
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Movie Lens}
+% \section{Movie Lens}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
 %----------------------------------------------------------------------------------------
-\begin{frame}
-\frametitle{Netflix Prize}
-  \textbf{Goal: Improve movie recommendations }
-  \begin{itemize}
-    \item Beat Netflix's Cinematch algorithm by 10\%.
-    \item RMSE Metric: 
-      $ RMSE = \sqrt{\frac{1}{n} \sum_{i=1}^{n} \left(y_i - \hat{y}_i \right)^2}$
-    \item \$1M prize.
-    \item Won in 2009 by Pragmatic Chaos team
-  \end{itemize}
+% \begin{frame}
+% \frametitle{Netflix Prize}
+%   \textbf{Goal: Improve movie recommendations }
+%   \begin{itemize}
+%     \item Beat Netflix's Cinematch algorithm by 10\%.
+%     \item RMSE Metric: 
+%       $ RMSE = \sqrt{\frac{1}{n} \sum_{i=1}^{n} \left(y_i - \hat{y}_i \right)^2}$
+%     \item \$1M prize.
+%     \item Won in 2009 by Pragmatic Chaos team
+%   \end{itemize}
+% 
+% \begin{figure}
+%   \scalebox{.6}{%
+% \includegraphics[width=0.8\linewidth]{belkor.jpg}
+%   }
+%   \caption{Belkor's Pragmatic Chaos}
+% \end{figure}
+% \end{frame}
 
-\begin{figure}
-  \scalebox{.6}{%
-\includegraphics[width=0.8\linewidth]{belkor.jpg}
-  }
-  \caption{Belkor's Pragmatic Chaos}
-\end{figure}
-\end{frame}
-
-
-%----------------------------------------------------------------------------------------
-\begin{frame}
-\frametitle{Movie Lens 100K}
-    \begin{columns}[t]
-    \column{.8\textwidth} % Right column and width
-    Netflix data taken down after 2009.  The UMN research group ``Grouplens''
-      provides similar data.
-    \column{.2\textwidth} % Right column and width
-      \begin{figure}
-        \scalebox{1}{%
-      \includegraphics[width=0.8\linewidth]{grouplens.png}
-        }
-      \end{figure}
-    \end{columns}
-  \begin{itemize}
-    \item 100K ratings
-    \item 943 users
-    \item 1682 movies
-    \item $R(u, i) = $ user $u$ rating on item $i$
-    \item Movie info: Genre and release year
-  \end{itemize}
-
- \begin{table}[ht]
-\centering
- \rowcolors{1}{light-gray}{light-blue}
-    \begin{tabular}{|cccccc|}
-      \hline
-        \tiny{user} & \tiny{\emph{Star Wars}} & \tiny{\emph{LOTR}} &
-        \tiny{\emph{The Godfather}} &
-         \tiny{\emph{Sprited Away}} &
-         $\cdots$  \\
-           \hline
-         1 &  5  & 4  & 1  & NA  & $\cdots$   \\
-         2 &  4  & 3  & 5  & NA  & $\cdots$   \\
-         3 &  NA & NA & 3  & 2   & $\cdots$   \\
-         4 &  3  & 5  & NA & 3   & $\cdots$   \\
-         5 &  5  & NA & NA & 5   & $\cdots$   \\
-      $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$  \\
-         \hline
-    \end{tabular}
-    % \label{ARFGAP}
-  \end{table}
-\end{frame}
-%----------------------------------------------------------------------------------------
 
 %----------------------------------------------------------------------------------------
-\begin{frame}
-\frametitle{Recommender Systems}
-  \centering{%
-  Goal: Estimate $\hat{R}(u, i)$ \\
-}
-  \vspace{1cm}
-  \begin{columns}[t]
-   \column{0.475\textwidth}
-    \textbf{Content Based RS}
-    \begin{itemize}
-      \item Relies on similarity of items
-        \bigskip
-      \item User independence
-      \item Over specialization
-        \bigskip
-      \item New user issue: Cannot make predictions for new users
-    \end{itemize}
-   \column{0.475\textwidth}
-    \textbf{Collaborative Filtering RS}
-    \begin{itemize}
-      \item Relies on similarity between users
-      \item User dependence
-      \item More diverse recommendations than CB
-      \item New item issue: Cannot make predictions on new items
-    \end{itemize}
-  \end{columns}
-\end{frame}
+% \begin{frame}
+% \frametitle{Movie Lens 100K}
+%     \begin{columns}[t]
+%     \column{.8\textwidth} % Right column and width
+%     Netflix data taken down after 2009.  The UMN research group ``Grouplens''
+%       provides similar data.
+%     \column{.2\textwidth} % Right column and width
+%       \begin{figure}
+%         \scalebox{1}{%
+%       \includegraphics[width=0.8\linewidth]{grouplens.png}
+%         }
+%       \end{figure}
+%     \end{columns}
+%   \begin{itemize}
+%     \item 100K ratings
+%     \item 943 users
+%     \item 1682 movies
+%     \item $R(u, i) = $ user $u$ rating on item $i$
+%     \item Movie info: Genre and release year
+%   \end{itemize}
+% 
+%  \begin{table}[ht]
+% \centering
+%  \rowcolors{1}{light-gray}{light-blue}
+%     \begin{tabular}{|cccccc|}
+%       \hline
+%         \tiny{user} & \tiny{\emph{Star Wars}} & \tiny{\emph{LOTR}} &
+%         \tiny{\emph{The Godfather}} &
+%          \tiny{\emph{Sprited Away}} &
+%          $\cdots$  \\
+%            \hline
+%          1 &  5  & 4  & 1  & NA  & $\cdots$   \\
+%          2 &  4  & 3  & 5  & NA  & $\cdots$   \\
+%          3 &  NA & NA & 3  & 2   & $\cdots$   \\
+%          4 &  3  & 5  & NA & 3   & $\cdots$   \\
+%          5 &  5  & NA & NA & 5   & $\cdots$   \\
+%       $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$  \\
+%          \hline
+%     \end{tabular}
+%     % \label{ARFGAP}
+%   \end{table}
+% \end{frame}
 %----------------------------------------------------------------------------------------
 
 %----------------------------------------------------------------------------------------
-\begin{frame}
-\frametitle{Content Based RS}
-  \begin{itemize}
-    \item How it works: item similarity matrix $S$
-    \item Cosine similarity 
-      $$S_{ij} = \cos{\theta} = \vec{m}_1 \cdot \vec{m}_2$$
-    \item Predicted ratings: 
-      $$\hat{R}(u, i) = \frac{\sum_{j} R(u, j) S_{ij}}{\sum_j R(u,j)}$$
-    \item Code: implemented in \texttt{R}
-    \item 5-fold CV: $RMSE \approx 1.43$
-  \end{itemize}
-\end{frame}
+% \begin{frame}
+% \frametitle{Recommender Systems}
+%   \centering{%
+%   Goal: Estimate $\hat{R}(u, i)$ \\
+% }
+%   \vspace{1cm}
+%   \begin{columns}[t]
+%    \column{0.475\textwidth}
+%     \textbf{Content Based RS}
+%     \begin{itemize}
+%       \item Relies on similarity of items
+%         \bigskip
+%       \item User independence
+%       \item Over specialization
+%         \bigskip
+%       \item New user issue: Cannot make predictions for new users
+%     \end{itemize}
+%    \column{0.475\textwidth}
+%     \textbf{Collaborative Filtering RS}
+%     \begin{itemize}
+%       \item Relies on similarity between users
+%       \item User dependence
+%       \item More diverse recommendations than CB
+%       \item New item issue: Cannot make predictions on new items
+%     \end{itemize}
+%   \end{columns}
+% \end{frame}
 %----------------------------------------------------------------------------------------
 
 %----------------------------------------------------------------------------------------
-\begin{frame}
-\frametitle{Collaborative Filtering RS}
-  \begin{itemize}
-    \item How it works: user similarity matrix $S$
-    \item Pearson similarity on items rated by both user $u$ and user $v$
-      $$S_{uv} = 
-      \frac{%
-        \sum_i \left(R(u,i) - \overline{R}_i\right)\left(R(v,i) - \overline{R}_i \right) %
-      }{%
-        \sqrt{\sum_i \left(R(u,i) - \overline{R}_i\right)^2 \sum_i\left(R(v,i) - \overline{R}_i \right)^2 }
-        }$$
-      \item Predicted ratings: 
-        $$\hat{R}(u, i) = 
-        \overline{R}_i + 
-        \frac{
-          \sum_vS_{uv} \left( R(v,i) - \overline{R_v} \right)
-        }{
-          \sum_vS_{uv}S_{uv}
-        }$$
-    \item Code: \texttt{graphlab} module in \texttt{python}
-    \item 5-fold CV: $RMSE \approx 1.02$
-  \end{itemize}
-\end{frame}
+% \begin{frame}
+% \frametitle{Content Based RS}
+%   \begin{itemize}
+%     \item How it works: item similarity matrix $S$
+%     \item Cosine similarity 
+%       $$S_{ij} = \cos{\theta} = \vec{m}_1 \cdot \vec{m}_2$$
+%     \item Predicted ratings: 
+%       $$\hat{R}(u, i) = \frac{\sum_{j} R(u, j) S_{ij}}{\sum_j R(u,j)}$$
+%     \item Code: implemented in \texttt{R}
+%     \item 5-fold CV: $RMSE \approx 1.43$
+%   \end{itemize}
+% \end{frame}
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+% \begin{frame}
+% \frametitle{Collaborative Filtering RS}
+%   \begin{itemize}
+%     \item How it works: user similarity matrix $S$
+%     \item Pearson similarity on items rated by both user $u$ and user $v$
+%       $$S_{uv} = 
+%       \frac{%
+%         \sum_i \left(R(u,i) - \overline{R}_i\right)\left(R(v,i) - \overline{R}_i \right) %
+%       }{%
+%         \sqrt{\sum_i \left(R(u,i) - \overline{R}_i\right)^2 \sum_i\left(R(v,i) - \overline{R}_i \right)^2 }
+%         }$$
+%       \item Predicted ratings: 
+%         $$\hat{R}(u, i) = 
+%         \overline{R}_i + 
+%         \frac{
+%           \sum_vS_{uv} \left( R(v,i) - \overline{R_v} \right)
+%         }{
+%           \sum_vS_{uv}S_{uv}
+%         }$$
+%     \item Code: \texttt{graphlab} module in \texttt{python}
+%     \item 5-fold CV: $RMSE \approx 1.02$
+%   \end{itemize}
+% \end{frame}
 %----------------------------------------------------------------------------------------
 
 %------------------------------------------------
-\begin{frame}
-\begin{columns}[t] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-
-\column{.3\textwidth} % Left column and width
-\begin{figure}
-\includegraphics[width=0.8\linewidth]{finches.jpg}
-\end{figure}
-Applying numerical optimization techniques to ongoing scientific research
-
-\column{.3\textwidth} % Right column and width
-\begin{figure}
-\includegraphics[width=0.8\linewidth]{DNA.jpg}
-\end{figure}
-Finding small signals in high noise situations
-
-\column{.3\textwidth} % Right column and width
-\begin{figure}
-\includegraphics[width=0.8\linewidth]{netflix.png}
-\end{figure}
-Predicting outcomes in complex data environments
-\end{columns}
-  \vspace{1cm}
-\large{\centerline{Thank you}}
-\end{frame}
+% \begin{frame}
+% \begin{columns}[t] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+% 
+% \column{.3\textwidth} % Left column and width
+% \begin{figure}
+% \includegraphics[width=0.8\linewidth]{finches.jpg}
+% \end{figure}
+% Applying numerical optimization techniques to ongoing scientific research
+% 
+% \column{.3\textwidth} % Right column and width
+% \begin{figure}
+% \includegraphics[width=0.8\linewidth]{DNA.jpg}
+% \end{figure}
+% Finding small signals in high noise situations
+% 
+% \column{.3\textwidth} % Right column and width
+% \begin{figure}
+% \includegraphics[width=0.8\linewidth]{netflix.png}
+% \end{figure}
+% Predicting outcomes in complex data environments
+% \end{columns}
+%   \vspace{1cm}
+% \large{\centerline{Thank you}}
+% \end{frame}
 
 %----------------------------------------------------------------------------------------
 %\begin{frame}
